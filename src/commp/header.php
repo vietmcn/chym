@@ -15,14 +15,16 @@ if ( !function_exists('chym_logo') ) {
             $h = 'h3';
         } else {
             $h = 'h1';
-            if ( is_front_page() || is_home() ) {
-                $meta = get_post_meta( $att['post_id'], $att['key_name'], true );
-                if ( !empty( $meta['meta_seo_title'] ) ) {
-                    $title = esc_attr( $meta['meta_seo_title'] );
-                }
+        }
+        if ( is_front_page() || is_home() ) {
+            $meta = get_post_meta( $att['post_id'], $att['key_name'], true );
+            if ( !empty( $meta['meta_seo_title'] ) ) {
+                $title = esc_attr( $meta['meta_seo_title'] );
             } else {
                 $title = get_bloginfo( 'name' );
             }
+        } else {
+            $title = get_bloginfo( 'name' );
         }
         $out = '<'.$h.'><a href="'.esc_url( get_bloginfo('url') ).'" title="'.$title.'">'.$title.'</a></'.$h.'>';
 
@@ -39,15 +41,18 @@ add_action( 'chym_header', function() {
      * @since 1.0
      * @author Chym Con
      */
-    $out  =  '<div flex id="chym-header" class="container">';
-    if ( is_home() || is_front_page() ) {
-        global $post;
-        $out .=  chym_logo( [
-            'post_id' => $post->ID,
-            'key_name' => '_chym_meta_seo',
-            'echo' => false
-        ] );
-    }
-    $out .=  '</div>';
+    global $chym_menu;
+    $out  = '<div flex id="chym-header" class="container">';
+    $out .= $chym_menu->menu( [
+        'class' => 'menu-header-before',
+        'echo' => false,
+        'item' => [
+            'Hổ trợ' => 'hotro',
+            'Kiểm tra đơn hàng' => 'kiemtradonhang',
+            'Đăng nhập' => 'login',
+            'Đăng ký' => 'dangky',
+        ]
+    ] );
+    $out .= '</div>';
     __render( $out );
 } );

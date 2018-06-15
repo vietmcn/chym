@@ -23,7 +23,7 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <?php wp_head();?>
 </head>
-<body class="trangfox" chym-body>
-<div class="container <?php chym_class();?> chym-body">
-<header id="chym-header"><?php do_action( 'chym_header' );?></header>
+<body class="trangfox" chymbody >
+<div class="container chym-body <?php chym_class();?>">
+<header id="chym-header" chymheader ><?php do_action( 'chym_header' );?></header>
 <main id="chym-main" class="main-set container <?php chym_class();?>">

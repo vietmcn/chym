@@ -22,4 +22,5 @@ $theme    = wp_get_theme( 'chym' );
 $chym_ver = $theme['Version'];
 
 require_once 'src/bootstrap.php';
+require_once 'src/help-functions.php';
 require_once 'src/_temp.php';

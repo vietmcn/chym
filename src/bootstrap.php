@@ -1,6 +1,8 @@
 <?php 
-
+//import Lib
 require_once 'inc/dashborad/meta-box.php';
+require_once 'inc/class.mobile-detect.php';
+require_once 'inc/class.menu.php';
 
 if ( !defined( 'ABSPATH' ) ) {
     exit;
@@ -23,7 +25,8 @@ if ( !class_exists( 'Ninja_Bootstrap' ) ) {
             add_action( 'init',               array( $this, 'chym_remove_emojis' ) );
             add_filter( 'wp_resource_hints',  array( $this, 'disable_emojis_remove_dns_prefetch' ), 10, 2 );
             add_filter( 'tiny_mce_plugins',   array( $this, 'disable_emojis_tinymce' ) );
-            add_filter( 'show_admin_bar',     '__return_false'); //Remove Bar Admin
+            //Remove Bar Admin
+            add_filter( 'show_admin_bar',     '__return_false'); 
         }
         public function chym_setup_template()
         {
@@ -33,7 +36,7 @@ if ( !class_exists( 'Ninja_Bootstrap' ) ) {
             * If you're building a theme based on twentyfifteen, use a find and replace
             * to change 'twentyfifteen' to the name of your theme in all the template files
             */
-            load_theme_textdomain( 'girl' );
+            load_theme_textdomain( 'chym' );
 
             // Add default posts and comments RSS feed links to head.
             add_theme_support( 'automatic-feed-links' );
@@ -67,20 +70,15 @@ if ( !class_exists( 'Ninja_Bootstrap' ) ) {
              * see https://codex.wordpress.org/Function_Reference/register_nav_menu
              */
             register_nav_menus( array(
-                'primary' => __( 'Primary Menu',      'chymfox_spa' ),
-            ) );
-
-            /*
-            * Enable support for Post Formats.
-            *
-            * See: https://codex.wordpress.org/Post_Formats
-            */
-            add_theme_support( 'post-formats', array(
-                'aside', 'image', 'video', 'quote', 'link', 'gallery', 'status', 'audio', 'chat'
+                'primary' => __( 'Primary Menu',      'chym_menu' ),
             ) );
 
             // Indicate widget sidebars can use selective refresh in the Customizer.
             add_theme_support( 'customize-selective-refresh-widgets' );
+            
+            //Template Support Woocommerce
+            add_theme_support( 'woocommerce' );
+
         }
         public function chym_script()
         {
@@ -90,9 +88,10 @@ if ( !class_exists( 'Ninja_Bootstrap' ) ) {
              * @since 1.0
              * @author Trangfox
              */
-            global $ver;
+            global $mobile, $chym_ver;
             //Style
             wp_enqueue_style( 'chym-style', get_template_directory_uri().'/style.css', '', $chym_ver );
+            wp_enqueue_style( 'chym-large', get_template_directory_uri().'/assets/css/large.min.css', '', $chym_ver );
         }
         public function chym_remove_emojis()
         {
@@ -109,7 +108,8 @@ if ( !class_exists( 'Ninja_Bootstrap' ) ) {
             remove_filter( 'comment_text_rss', 'wp_staticize_emoji' ); 
             remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
         }
-        public function disable_emojis_tinymce( $plugins ) {
+        public function disable_emojis_tinymce( $plugins ) 
+        {
            /**
             * Filter function used to remove the tinymce emoji plugin.
             * 
@@ -122,7 +122,8 @@ if ( !class_exists( 'Ninja_Bootstrap' ) ) {
             return array();
             }
         }
-        public function disable_emojis_remove_dns_prefetch( $urls, $relation_type ) {
+        public function disable_emojis_remove_dns_prefetch( $urls, $relation_type ) 
+        {
            /**
             * Remove emoji CDN hostname from DNS prefetching hints.
             *
