@@ -27,31 +27,29 @@ if ( !function_exists('chym_logo') ) {
             $title = get_bloginfo( 'name' );
         }
         $out = '<'.$h.'><a href="'.esc_url( get_bloginfo('url') ).'" title="'.$title.'">'.$title.'</a></'.$h.'>';
-
-        if ( $att['echo'] == false ) {
-            return $out;
-        } else {
-            __render( $out );
-        }
+        return $out;
     }
 }
 add_action( 'chym_header', function() {
     /**
      * Render Các Đối Tượng Trong Header
+     * 
+     * @import /inc/class.menu.php;
+     * 
      * @since 1.0
      * @author Chym Con
      */
     global $chym_menu;
-    $out  = '<div flex id="chym-header" class="container">';
+    $out  = '<div flex id="chym-header" class="">';
     $out .= $chym_menu->menu( [
         'class' => 'menu-header-before',
-        'echo' => false,
+        'cart' => true,
         'item' => [
             'Hổ trợ' => 'hotro',
             'Kiểm tra đơn hàng' => 'kiemtradonhang',
             'Đăng nhập' => 'login',
             'Đăng ký' => 'dangky',
-        ]
+        ],
     ] );
     $out .= '</div>';
     __render( $out );

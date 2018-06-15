@@ -38,6 +38,7 @@ add_action( 'chym_page', function() {
     }
     $out  = '<aside chym-sidebar class="sidebar" id="idsidebar">';
     $out .= chym_sidebar_logo( $post_id );
+    $out .= '<span class="sidebar-border"></span>';
     $out .= '</aside>';
     __render( $out );
 } );

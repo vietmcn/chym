@@ -92,6 +92,13 @@ if ( !class_exists( 'Ninja_Bootstrap' ) ) {
             //Style
             wp_enqueue_style( 'chym-style', get_template_directory_uri().'/style.css', '', $chym_ver );
             wp_enqueue_style( 'chym-large', get_template_directory_uri().'/assets/css/large.min.css', '', $chym_ver );
+            /**
+             * Font Google 
+             * more {@link: https://fonts.google.com/specimen/Quicksand}
+             * @since 1.0
+             */
+            wp_enqueue_style( 'chym-font', '//fonts.googleapis.com/css?family=Quicksand:400,500,700', '', $chym_ver );
+            wp_enqueue_script( 'chym-font-icon', '//unpkg.com/ionicons@4.2.0/dist/ionicons.js', array( 'jquery' ), '4.2.0', true );
         }
         public function chym_remove_emojis()
         {

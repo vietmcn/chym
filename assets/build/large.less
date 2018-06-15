@@ -9,6 +9,12 @@ body {
     background-image: url('../img/bg.png');
     background-size: cover;
     background-repeat: no-repeat;
+    .container {
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+        min-height: 670px;
+    }
     .chym-body {
         flex-direction: column;
         justify-content: center;
@@ -25,6 +31,34 @@ body {
         # Desktop + Tablet
     ==========================*/
     header#chym-header {
-        
+        background-color: @xam;
+        [nav-menu] {
+            width: 80%;
+            ul {
+                padding: 0px;
+                margin: 0px;
+                height: 100%;
+                justify-content: flex-end;
+                li {
+                    list-style: none;
+                    a {
+                        color: @trang;
+                        align-items: center;
+                        height: 50px;
+                        padding: 10px;
+                        .font(13);
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+    /*==========================
+        # Create Sidebar
+        # Desktop + Tablet
+    ==========================*/
+    [chym-sidebar] {
+        background-color: @xam-dam;
+        width: 20%;
     }
 }
