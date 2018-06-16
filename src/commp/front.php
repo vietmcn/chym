@@ -15,7 +15,7 @@ add_action( 'chym_page', function() {
          * @import /shop/front.php;
          * @since 1.0
          */
-        import_commp( 'front', 'shop' );
+        import_commp( 'front', 'wc' );
     }
 
     __render( '</section>' );

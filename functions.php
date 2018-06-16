@@ -24,6 +24,6 @@ $chym_ver = $theme['Version'];
 require_once 'src/bootstrap.php';
 require_once 'src/help-functions.php';
 if ( chym_is_woocommerce_activated() ) {
-    require_once 'src/wc/wc-config.php';
+    require_once 'src/wc/_config.php';
 }
 require_once 'src/_temp.php';

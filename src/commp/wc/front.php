@@ -2,7 +2,7 @@
 if ( !defined('ABSPATH') ) {
     exit;
 }
-$out = '<header id="product-sale" class="productlist de-xuat-cho-ban">';
+$out = '<aside id="product-sale" class="productlist de-xuat-cho-ban">';
 $out .= '<p>Hello WOrld</p>';
-$out .= '</header>';
+$out .= '</aside>';
 __render( $out );
