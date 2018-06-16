@@ -47,15 +47,15 @@ if ( !class_exists( 'Ninja_Bootstrap' ) ) {
             * hard-coded <title> tag in the document head, and expect WordPress to
             * provide it for us.
             */
-            add_theme_support( 'title-tag' );
+            #add_theme_support( 'title-tag' );
 
             /*
             * Enable support for Post Thumbnails on posts and pages.
             *
             * See: https://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
             */
-            add_theme_support( 'post-thumbnails' );
-            set_post_thumbnail_size( 825, 510, true );
+            #add_theme_support( 'post-thumbnails' );
+            #set_post_thumbnail_size( 825, 510, true );
 
             /*
             * Switch default core markup for search form, comment form, and comments

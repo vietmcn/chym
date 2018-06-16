@@ -8,18 +8,16 @@ add_action( 'chym_page', function() {
      * @since 1.0
      * @author chym
      */
-    $out = '<section id="contentID" flex class="chym-content container">';
+    __render( '<section id="contentID" flex chym-product class="chymproducts list-product chym-content container">' );
 
     if ( chym_is_woocommerce_activated() ) {
-
-        $out .= import_commp( 'front', 'shop' );
-
-    } else {
-
-        $out .= '<div>Hello baby</div>';
+        /**
+         * @import /shop/front.php;
+         * @since 1.0
+         */
+        import_commp( 'front', 'shop' );
     }
 
-    $out .= '</section>';
+    __render( '</section>' );
 
-    __render( $out );
 } );

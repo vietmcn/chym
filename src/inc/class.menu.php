@@ -10,9 +10,10 @@ class Custom_Menu
     {
         $out  = '<li>';
         $out .= '<a flex class="cart-contents" href="'.esc_url( wc_get_cart_url() ).'" title="'.esc_attr( 'Kiểm tra giỏ hàng của bạn', 'chymcon' ).'">';
-        $out .= wp_kses_post( WC()->cart->get_cart_subtotal() );
+        #$out .= wp_kses_post( WC()->cart->get_cart_subtotal() );
+        $out .= '<ion-icon name="basket"></ion-icon>';
         $out .= '<span class="cart-count">';
-        $out .= wp_kses_data( sprintf( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'storefront' ), WC()->cart->get_cart_contents_count() ) );
+        $out .= wp_kses_data( WC()->cart->get_cart_contents_count() );
         $out .= '</span>';
         $out .= '</a>';
         $out .= '</li>';

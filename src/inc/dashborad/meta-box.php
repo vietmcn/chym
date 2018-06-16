@@ -132,11 +132,11 @@ if ( !class_exists('Content_metabox') ) {
             }
             // loop through fields and save the data
             
-                $new_Thumbnail = $_POST['_meta_thumbnail'];
-                $new_Seo       = $_POST['_meta_seo'];
+                $new_Thumbnail = $_POST['_chym_meta_product'];
+                $new_Seo       = $_POST['_chym_meta_seo'];
 
-                update_post_meta( $post_id, '_meta_thumbnail', $new_Thumbnail );
-                update_post_meta( $post_id, '_meta_seo', $new_Seo );
+                update_post_meta( $post_id, '_chym_meta_product', $new_Thumbnail );
+                update_post_meta( $post_id, '_chym_meta_seo', $new_Seo );
 
         }
         public function print_script()
