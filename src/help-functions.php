@@ -35,6 +35,9 @@ if ( !function_exists( 'chym_class' ) ) {
 		if ( $mobile->isTablet() || ! $mobile->isMobile() ) {
 			__render( 'flex' );
 		}
+		if ( is_home() || is_front_page() ) {
+			__render( ' chym_frontpage' );
+		}
 	}
 }
 

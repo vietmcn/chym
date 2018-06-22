@@ -15,4 +15,4 @@
  * @author ninjafox
  */
 ?>
-</main><?php do_action('chym_footer');?><?php wp_footer();?></body>
+</main><?php do_action('chym_footer');?></div><?php wp_footer();?></body>

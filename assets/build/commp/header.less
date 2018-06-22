@@ -1,27 +1,37 @@
 // main: ../large.less
 header#chym-header {
     background-color: @color-xamnhat;
-    .header-title {
-        width: 20%;
+    .chym-breadcrumb {
+        width: 40%;
         padding: 0 15px;
         align-items: center;
         color: @color-xamxanh;
-        ion-icon {
-            font-size: 25px;
+        margin: 0;
+        li {
+            list-style: none;
             height: 100%;
-        }
-        h4 {
-            margin: 0px 0 0 5px;
-            align-items: center;
-            height: 100%;
-            .fontw(500);
             .font(13);
             .display(flex);
-            text-transform: uppercase;
+            align-items: center;
+            ion-icon {
+                font-size: 25px;
+                height: 100%;
+            }
+            a {
+                color: @color-trang;
+            }
+            h4 {
+                margin: 3px 0 0 5px;
+                align-items: center;
+                height: 100%;
+                .fontw(500);
+                .display(flex);
+                text-transform: uppercase;
+            }
         }
     }
     [nav-menu] {
-        width: 80%;
+        width: 60%;
         ul {
             padding: 0px;
             margin: 0px;
@@ -30,12 +40,11 @@ header#chym-header {
             li {
                 list-style: none;
                 a {
-                    .font(12);
+                    .font(13);
                     color: @color-trang;
                     align-items: center;
                     height: 50px;
                     padding: 10px;
-                    text-transform: uppercase;
                 }
                 .cart-contents {
                     background-color: @color-xanh;

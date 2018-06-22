@@ -147,4 +147,4 @@ if ( !class_exists( 'Ninja_Bootstrap' ) ) {
         }
     }
 }
-return new Ninja_Bootstrap;
+return new Chym_Bootstrap;

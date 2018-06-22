@@ -12,10 +12,19 @@ add_action( 'chym_page', function() {
 
     if ( chym_is_woocommerce_activated() ) {
         /**
-         * @import /shop/front.php;
+         * @import /wc/product-cat.php;
          * @since 1.0
          */
-        import_commp( 'front', 'wc' );
+        import_commp( 'product-cat', 'wc' );
+        import_commp( 'product', 'wc' );
+        __render(
+            chym_product_cat().
+            chym_product_content( [
+                'posts_per_page' => 10,
+                'orderby' => 'date',
+                'order'   => 'DESC',
+            ] )
+        );
     }
 
     __render( '</section>' );

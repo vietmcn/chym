@@ -6,11 +6,11 @@ html,body {
     }
 }
 body {
-    background-image: url('../img/bg.png');
+    background: #efefef;
     background-size: cover;
     background-repeat: no-repeat;
     .container {
-        max-width: 1200px;
+        max-width: 1024px;
         width: 100%;
         margin: 0 auto;
         min-height: 670px;
@@ -35,10 +35,20 @@ body {
         # Create Sidebar
         # Desktop + Tablet
     ==========================*/
-    @import 'commp/sidebar.less';
+    //@import 'commp/sidebar.less';
     /*==========================
         # Create Front
         # Desktop + Tablet
     ==========================*/
     @import 'commp/front.less';
+     /*==========================
+        # Create Product Cat
+        # Desktop + Tablet
+    ==========================*/
+    @import 'commp/product-cat.less';
+    /*==========================
+        # Create Product
+        # Desktop + Tablet
+    ==========================*/
+    @import 'commp/product.less';
 }
