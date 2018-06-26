@@ -1,9 +1,15 @@
 <?php
-require_once ( N_EXTEND_FOLDER .'/src/wc/remove-single-product.php' );
-
 if (! defined( 'ABSPATH' ) ) {
     exit;
 }
+/**
+ * Import WC
+ * more {@link: https://woocommerce.com/}
+ * @since 3.4+
+ * @author Woocommerce
+ */
+require_once ( N_EXTEND_FOLDER .'/src/wc/remove-single-product.php' );
+
 class Chym_WCconfig
 {
     public function __construct()

@@ -100,5 +100,4 @@ if ( !class_exists('Chym_field') ) {
             echo $out;
         }
     }
-    
 }

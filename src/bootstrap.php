@@ -1,14 +1,12 @@
 <?php 
-//import Lib
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
 require_once 'inc/dashborad/meta-box.php';
 require_once 'inc/class.mobile-detect.php';
 require_once 'inc/class.menu.php';
 
-if ( !defined( 'ABSPATH' ) ) {
-    exit;
-}
-
-if ( !class_exists( 'Ninja_Bootstrap' ) ) {
+if ( !class_exists( 'Chym_Bootstrap' ) ) {
     /**
      * 
      * Bootstrap Template 
@@ -16,7 +14,7 @@ if ( !class_exists( 'Ninja_Bootstrap' ) ) {
      * @author facebook.com/vietmcn.com
      * 
      */
-    class Ninja_Bootstrap
+    class Chym_Bootstrap
     {
         public function __construct()
         {
