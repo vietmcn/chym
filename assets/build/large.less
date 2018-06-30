@@ -1,4 +1,4 @@
-// out: ../css/large.min.css, compress: true, sourceMap: false
+// out: ../css/chym-large.min.css, compress: true, sourceMap: false
 @import 'mod/function.less';
 html,body {
     @media only screen and ( max-width: 1024px ) {
@@ -11,6 +11,7 @@ body {
     background-repeat: no-repeat;
     .container {
         max-width: 1024px;
+        min-width: 1000px;
         width: 100%;
         margin: 0 auto;
         min-height: 670px;
@@ -30,25 +31,25 @@ body {
         # Create Header
         # Desktop + Tablet
     ==========================*/
-    @import 'commp/header.less';
+    @import 'commp/large/header.less';
     /*==========================
         # Create Sidebar
         # Desktop + Tablet
     ==========================*/
-    //@import 'commp/sidebar.less';
+    //@import 'commp/large/sidebar.less';
     /*==========================
         # Create Front
         # Desktop + Tablet
     ==========================*/
-    @import 'commp/front.less';
+    @import 'commp/large/front.less';
      /*==========================
         # Create Product Cat
         # Desktop + Tablet
     ==========================*/
-    @import 'commp/product-cat.less';
+    @import 'commp/large/product-cat.less';
     /*==========================
         # Create Product
         # Desktop + Tablet
     ==========================*/
-    @import 'commp/product.less';
+    @import 'commp/large/product.less';
 }

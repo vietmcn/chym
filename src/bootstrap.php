@@ -19,7 +19,8 @@ if ( !class_exists( 'Chym_Bootstrap' ) ) {
         public function __construct()
         {
             add_action( 'after_setup_theme',  array( $this, 'chym_setup_template' ) );
-            add_action( 'wp_enqueue_scripts', array( $this, 'chym_script' ) );
+            add_action( 'wp_enqueue_scripts', array( $this, 'chym_script_style' ) );
+            add_action( 'wp_enqueue_scripts', array( $this, 'chym_script_script' ) );
             add_action( 'init',               array( $this, 'chym_remove_emojis' ) );
             add_filter( 'wp_resource_hints',  array( $this, 'disable_emojis_remove_dns_prefetch' ), 10, 2 );
             add_filter( 'tiny_mce_plugins',   array( $this, 'disable_emojis_tinymce' ) );
@@ -45,7 +46,7 @@ if ( !class_exists( 'Chym_Bootstrap' ) ) {
             * hard-coded <title> tag in the document head, and expect WordPress to
             * provide it for us.
             */
-            #add_theme_support( 'title-tag' );
+            add_theme_support( 'title-tag' );
 
             /*
             * Enable support for Post Thumbnails on posts and pages.
@@ -78,7 +79,7 @@ if ( !class_exists( 'Chym_Bootstrap' ) ) {
             add_theme_support( 'woocommerce' );
 
         }
-        public function chym_script()
+        public function chym_script_style()
         {
             /**
              * Config Style Template
@@ -89,7 +90,19 @@ if ( !class_exists( 'Chym_Bootstrap' ) ) {
             global $mobile, $chym_ver;
             //Style
             wp_enqueue_style( 'chym-style', get_template_directory_uri().'/style.css', '', $chym_ver );
-            wp_enqueue_style( 'chym-large', get_template_directory_uri().'/assets/css/large.min.css', '', $chym_ver );
+
+            if ( $mobile->isMobile() ) {
+
+                wp_enqueue_style( 'chym-small-front', get_template_directory_uri().'/assets/css/chym-small-front.min.css', '', $chym_ver );
+
+            } else {
+                
+                wp_enqueue_style( 'chym-large', get_template_directory_uri().'/assets/css/chym-large.min.css', '', $chym_ver );
+
+            }
+        }
+        public function chym_script_javascript()
+        {
             /**
              * Font Google 
              * more {@link: https://fonts.google.com/specimen/Quicksand}

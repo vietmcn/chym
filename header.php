@@ -15,7 +15,6 @@
  */ ?><!DOCTYPE html>
 <html <?php language_attributes(); ?> prefix="og:http://ogp.me/ns#" class="no-js">
 <head>
-<title><?php echo apply_filters( 'chym_title', $att = '' );?></title>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <?php do_action( 'chym_meta' );?>

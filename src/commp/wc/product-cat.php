@@ -1,4 +1,7 @@
 <?php 
+if ( !defined('ABSPATH') ) {
+    exit;
+}
 if ( !function_exists( 'chym_product_cat' ) ) {
     function chym_product_cat( $att = NULL )
     {

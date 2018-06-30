@@ -1,45 +1,39 @@
 <?php 
-import_commp( 'breadcrumb', 'global' );
-
 if ( !defined('ABSPATH') ) {
     exit;
 }
+//Breadcrumb
+import_commp( 'breadcrumb', 'global' );
 
 add_action( 'chym_header', function() {
     /**
      * Render Các Đối Tượng Trong Header
      * 
-     * @import /inc/class.menu.php;
+     * @import /inc/class.menu.php
+     * @import /commp/wc/navbars.php
      * 
      * @since 1.0
      * @author Chym Con
      */
-    global $chym_menu, $mobile, $post;
+    global $mobile, $post;
 
     $out  = '<div flex id="chym-header" class="">';
 
-    if ( !$mobile->isTablet() || !$mobile->isMobile() ) {
-        if ( is_singular( 'product' ) ) {
-            $post_id = $post->ID;
-        } else {
-            $post_id = NULL;
-        }
-        //Breadcrumb
-        $out .= chym_breadcrumb( $post_id );
-        //Menu
-        $out .= $chym_menu->menu( [
-            'class' => 'menu-header-before',
-            'cart' => true,
-            'item' => [
-                'Hổ trợ' => 'hotro',
-                'Kiểm tra đơn hàng' => 'kiemtradonhang',
-                'Đăng nhập' => 'login',
-                'Đăng ký' => 'dangky',
-            ],
-        ] );
-    }
+    if ( $mobile->isMobile() ) {
 
+        if ( chym_is_woocommerce_activated() ) {
+
+            //import WC_Custom_Nav
+            require_once 'wc/navbars.php';
+            $menu = new Chym_WC_Navbar();
+            
+            $out .= $menu->get_the_nav( [
+                'logo' => 'TrangFox.com',
+            ] );
+        }    
+
+    } 
     $out .= '</div>';
-
+    //Render
     __render( $out );
 } );

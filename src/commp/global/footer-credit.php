@@ -1,4 +1,7 @@
 <?php 
+if ( !defined( 'ABSPATH' ) ) {
+    exit;
+}
 if ( !function_exists( 'chym_footer_credit' ) ) {
     function chym_footer_credit()
     {

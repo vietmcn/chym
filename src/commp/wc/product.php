@@ -2,6 +2,8 @@
 if ( !defined('ABSPATH') ) {
     exit;
 }
+require N_EXTEND_FOLDER .'/src/wc/global/price.php';
+
 if ( !function_exists( 'chym_product_content' ) ) {
     function chym_product_content( $att = array() )
     {
@@ -30,7 +32,6 @@ if ( !function_exists( 'chym_product_content' ) ) {
                 $out .= '<footer id="chym-productinfo">';
                 $out .= '<h3><a href="'.esc_url( get_permalink( $Query->post->ID ) ).'">'.get_the_title( $Query->post->ID ).'</a></h3>';
                 $out .= '<div class="chym-productprice">';
-                #$out .= get_term_by( 'name', 'price' );
                 $out .= '</div>';
                 $out .= '</footer>';
                 $out .= '</div>';

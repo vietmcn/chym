@@ -9,10 +9,10 @@
  *
  * Learn more: {@link https://codex.wordpress.org/Template_Hierarchy}
  *
- * @package Ninjafox
+ * @package Chym
  * @subpackage Wordpress 4x
  * @since 1.0
- * @author ninjafox
+ * @author Chym
  */
 ?>
 </main><?php do_action('chym_footer');?></div><?php wp_footer();?></body>
