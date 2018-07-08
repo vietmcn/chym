@@ -19,7 +19,6 @@ add_action( 'chym_index', function() {
         import_commp( 'product-cat', 'wc' );
         import_commp( 'product', 'wc' );
         __render(
-            chym_product_cat().
             chym_product_content( [
                 'posts_per_page' => 10,
                 'orderby' => 'date',

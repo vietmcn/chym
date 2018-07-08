@@ -105,7 +105,11 @@ if ( !class_exists( 'Chym_Bootstrap' ) ) {
         }
         public function chym_script_javascript()
         {   
+            global $chym_ver, $mobile;
             wp_enqueue_script( 'chym-font-icon', '//unpkg.com/ionicons@4.2.0/dist/ionicons.js', array( 'jquery' ), '4.2.0', true );
+            if ( $mobile->isMobile() ) {
+                wp_enqueue_script( 'chym-small', get_template_directory_uri().'/assets/js/chym-small.js', array( 'jquery' ), $chym_ver, true );
+            }
         }
         public function chym_remove_emojis()
         {

@@ -21,7 +21,7 @@ if ( !function_exists( 'chym_render_sidebar' ) ) {
                 $post_id = NULL;
             }
             $out  = '<aside chym-sidebar class="sidebar" id="idsidebar">';
-            $out .= 'Hello';
+            #$out .= 'Hello';
             $out .= '<span class="sidebar-border"></span>';
             
             $out .= '</aside>';

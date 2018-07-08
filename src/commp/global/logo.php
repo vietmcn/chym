@@ -11,7 +11,7 @@ if ( !function_exists('Chym_logo') ) {
      */
     function Chym_logo( $att = array() )
     {
-        if ( ! is_singular() ) {
+        if ( is_singular() ) {
             $h = 'h3';
         } else {
             $h = 'h1';

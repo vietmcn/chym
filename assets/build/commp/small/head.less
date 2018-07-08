@@ -3,6 +3,8 @@ header {
     background-color: #073861;
     padding: 10px;
     min-height: 58px;
+    position: relative;
+    z-index: 9;
     #chym-header { 
         align-items: center;
         //Logo 
@@ -14,6 +16,7 @@ header {
             text-align: center;
             a {
                 color: @color-trang;
+                text-decoration: none;
             }
         }
         //cart
@@ -22,8 +25,9 @@ header {
             width: 12%;
             text-align: center;
             a {
+                display: block;
                 ion-icon {
-                    font-size: 30px;
+                    font-size: 28px;
                     color: @color-trang;
                 }
                 span.count {

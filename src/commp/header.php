@@ -19,7 +19,7 @@ add_action( 'chym_header', function() {
     
     if ( $mobile->isMobile() ) {
 
-        $out .= Chym_navbar_button();
+        $out .= Chym_navbar_m();
 
         $out .= Chym_logo( [
             'logo' => 'OzoneMienNam.com',
