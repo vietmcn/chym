@@ -2,37 +2,33 @@
 if ( !defined('ABSPATH') ) {
     exit;
 }
-//Breadcrumb
-import_commp( 'breadcrumb', 'global' );
+import_commp( 'logo', 'global' );
+import_commp( 'navbars', 'global' );
+import_commp( 'cart', 'wc' );
 
 add_action( 'chym_header', function() {
     /**
      * Render Các Đối Tượng Trong Header
-     * 
-     * @import /inc/class.menu.php
-     * @import /commp/wc/navbars.php
      * 
      * @since 1.0
      * @author Chym Con
      */
     global $mobile, $post;
 
-    $out  = '<div flex id="chym-header" class="">';
-
+    $out  = '<div flex id="chym-header" class="header-content">';
+    
     if ( $mobile->isMobile() ) {
 
-        if ( chym_is_woocommerce_activated() ) {
+        $out .= Chym_navbar_button();
 
-            //import WC_Custom_Nav
-            require_once 'wc/navbars.php';
-            $menu = new Chym_WC_Navbar();
-            
-            $out .= $menu->get_the_nav( [
-                'logo' => 'TrangFox.com',
-            ] );
-        }    
+        $out .= Chym_logo( [
+            'logo' => 'OzoneMienNam.com',
+            'logo_title' => 'Máy Lộc Nước Ozone Miền Nam'
+        ] );
+        
+        $out .= Chym_WC_Cart_m();
+    }
 
-    } 
     $out .= '</div>';
     //Render
     __render( $out );

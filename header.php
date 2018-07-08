@@ -25,4 +25,4 @@
 <body class="trangfox <?php chym_class();?>" chymbody >
 <div class="container chym-body">
 <header id="chym-header" chymheader ><?php do_action( 'chym_header' );?></header>
-<main id="chym-main" flex class="main-set container">
+<main id="chym-main" class="main-set container">

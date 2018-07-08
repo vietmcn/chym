@@ -12,7 +12,7 @@ add_action( 'chym_footer', function() {
      * @author chym con
      */
     import_commp( 'footer-credit', 'global' );
-    $out  = '<footer flex class="chym-footer">';
+    $out  = '<footer class="chym-footer">';
     $out .= chym_footer_credit();
     $out .= '</footer>';
     __render( $out );
