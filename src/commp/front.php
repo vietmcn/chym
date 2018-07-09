@@ -3,6 +3,8 @@ if ( !defined( 'ABSPATH' ) ) {
     exit;
 }
 add_action( 'chym_index', function() {
+
+    global $mobile;
     /**
      * Create Front Page
      * @since 1.0
@@ -16,8 +18,16 @@ add_action( 'chym_index', function() {
          * @import /wc/product.php
          * @since 1.0
          */
-        import_commp( 'product-cat', 'wc' );
+        import_commp( 'owlcarousel', 'global' );
         import_commp( 'product', 'wc' );
+        //Render Owl
+        __render( Chym_owl_m([
+            'item' => [
+                'img' => 'https://i.imgur.com/KDwAnY7.png',
+                'link' => '#',
+            ]
+        ] ) );
+        //Render Product List Item
         __render(
             chym_product_content( [
                 'posts_per_page' => 10,

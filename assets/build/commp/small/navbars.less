@@ -1,6 +1,7 @@
 // main: ../../small.less
 nav#chym-button-mobile {
     width: 12%;
+    text-align: center;
     button:focus {
         outline: 0;
     }
@@ -87,17 +88,51 @@ nav#chym-button-mobile {
     top: 58px;
     left: 0;
     right: 0;
-    background: #fff;
-    padding: 10px;
+    background: #f3f5f7;
+    .font(14);
     visibility: hidden; /* hides sub-menu */
-    transform: translateY(-10em);
+    transform: translateY(-20em);
     transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
     z-index: 2;
     ul {
         padding: 0px;
         margin: 0px;
+        h4 {
+            color: #afb0b3;
+            font-size: 12px;
+            font-weight: 500;
+            text-transform: uppercase;
+            padding: 10px;
+            margin: 0px;
+            background: #f3f5f7;
+        }
         li {
             list-style: none;
+            background-color: #fff;
+            position: relative;
+            align-items: center;
+            .display(flex);
+            ion-icon {
+                font-size: 24px;
+                vertical-align: -5px;
+                color: #dc0021;
+                position: relative;
+                top: -3px;
+                left: 5px;
+            }
+            a {
+                color: @color-den;
+                display: block;
+                width: 100%;
+                padding: 10px;
+                text-decoration: none;
+                strong {
+                    color: #dc0021;
+                }
+            }
+        }
+        li.hotline {
+            margin-top: 1rem;
         }
     }
 }
