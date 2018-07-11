@@ -23,9 +23,19 @@ add_action( 'chym_index', function() {
         //Render Owl
         __render( Chym_owl_m([
             'item' => [
-                'img' => 'https://i.imgur.com/KDwAnY7.png',
-                'link' => '#',
-            ]
+                's1' => [ 
+                    'img' => 'https://i.imgur.com/KDwAnY7.png',
+                    'link' => '#',
+                ],
+                's2' => [
+                    'img' => 'https://i.imgur.com/5sagBRE.png',
+                    'link' => '#',
+                ],
+                's3' => [
+                    'img' => 'https://i.imgur.com/FoGbLu6.png',
+                    'link' => '#',
+                ]
+            ],
         ] ) );
         //Render Product List Item
         __render(

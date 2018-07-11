@@ -4,4 +4,11 @@ jQuery(document).ready(function ($) {
         $(".Chym-navbar-m").toggleClass("show", 800, "easeOutQuint");
         //e.stopPropagation();
     });
+    //owl-carousel
+    $('.owl-carousel').owlCarousel({
+        margin: 10,
+        loop: false,
+        autoWidth: true,
+        items: 4
+    })
 });

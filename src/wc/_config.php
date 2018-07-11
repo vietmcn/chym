@@ -8,7 +8,8 @@ if (! defined( 'ABSPATH' ) ) {
  * @since 3.4+
  * @author Woocommerce
  */
-require_once ( N_EXTEND_FOLDER .'/src/wc/remove-single-product.php' );
+require_once ( 'hook/product-taxonamy.php' );
+require_once ( 'hook/product-single.php' );
 
 class Chym_WCconfig
 {
