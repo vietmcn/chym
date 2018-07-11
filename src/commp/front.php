@@ -34,6 +34,30 @@ add_action( 'chym_index', function() {
                 's3' => [
                     'img' => 'https://i.imgur.com/FoGbLu6.png',
                     'link' => '#',
+                ],
+                's4' => [
+                    'img' => 'https://i.imgur.com/PgufLke.png',
+                    'link' => '#',
+                ],
+                's5' => [
+                    'img' => 'https://i.imgur.com/ParoOaM.png',
+                    'link' => '#',
+                ],
+                's6' => [
+                    'img' => 'https://i.imgur.com/j4aAI68.png',
+                    'link' => '#',
+                ],
+                's7' => [
+                    'img' => 'https://i.imgur.com/5sagBRE.png',
+                    'link' => '#',
+                ],
+                's8' => [
+                    'img' => 'https://i.imgur.com/EgY4mAU.png',
+                    'link' => '#',
+                ],
+                's9' => [
+                    'img' => 'https://i.imgur.com/VGyAIDw.png',
+                    'link' => '#',
                 ]
             ],
         ] ) );

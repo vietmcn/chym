@@ -9,6 +9,7 @@ jQuery(document).ready(function ($) {
         margin: 10,
         loop: false,
         autoWidth: true,
-        items: 4
+        items: 4,
+        dots: false,
     })
 });

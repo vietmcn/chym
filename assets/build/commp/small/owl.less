@@ -1,4 +1,26 @@
 // main: ../../small.less
 .chym-owl {
-    padding: 10px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    background: #fff;
+    max-height: 60px;
+    padding: 0 10px;
+    .item {
+        display: inline-flex;
+        align-items: center;
+        height: 60px;
+        a {
+            display: block;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .owl-item {
+        .display(flex);
+        align-items: center;
+    }
+    .owl-stage {
+        overflow: hidden;
+    }
 }
