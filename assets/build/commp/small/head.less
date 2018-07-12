@@ -3,8 +3,11 @@ header {
     background-color: #073861;
     padding: 5px 10px;
     min-height: 45px;
-    position: relative;
-    z-index: 9;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 10;
     #chym-header { 
         align-items: center;
         min-height: 35px;
@@ -27,7 +30,7 @@ header {
             text-align: center;
             a {
                 display: block;
-                ion-icon {
+                .ion-ios-cart {
                     font-size: 25px;
                     color: @color-trang;
                 }

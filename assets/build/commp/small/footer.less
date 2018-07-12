@@ -5,6 +5,7 @@ footer {
         background: @color-trang;
         padding: 10px;
         .display(flex);
+        border-bottom: 1px solid #ebebeb;
         .col-left {
             width: 30%;
             .icon-support {
@@ -15,12 +16,12 @@ footer {
         }
         .col-right {
             width: 70%;
-            .font(14);
+            .font(13);
             h3 {
-                .fontw(400);
-                .font(14);
+                .fontw(500);
+                .font(13);
                 span {
-                    .fontw(500);
+                    .fontw(400);
                 }
             }
             h3,p {
@@ -37,6 +38,71 @@ footer {
             .t-ms2 {
                 a {
                     color: #1fb349;
+                }
+            }
+        }
+    }
+    //Social Net
+    .network {
+        padding: 10px 10px;
+        background: @color-trang;
+        h4 {
+            .fontw(500);
+            .font(13);
+            margin-bottom: 15px;
+        }
+        .icon-mxh {
+            .display(flex);
+            justify-content: center;
+            a {
+                display: inline-flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 0 15px;
+                span {
+                    .border-radius(50%);
+                    .display(flex);
+                    height: 35px;
+                    width: 35px;
+                    align-items: center;
+                    justify-content: center;
+                        i {
+                        font-size: 20px;
+                    }
+                }
+                p {
+                    .font(12);
+                    margin-top: 5px;
+                    margin-bottom: 0px;
+                    color: @color-den;
+                }
+                span.zalo {
+                    background: #0180c7;
+                    .icon-zalo {
+                        .font(12);
+                        .fontw(500);
+                        font-style: normal;
+                        color: @color-trang;
+                    }
+                }
+                span.youtube {
+                    background: #d22215;
+                    .ion-logo-youtube {
+                        color: @color-trang;
+                    }
+                }
+                span.googleplus {
+                    background: #dc4e41;
+                    .ion-logo-googleplus {
+                        color: @color-trang;
+                    }
+                }
+                span.facebook {
+                    //background: #3b5898;
+                    .ion-logo-facebook {
+                        color: #3b5898;
+                        font-size: 40px;
+                    }
                 }
             }
         }

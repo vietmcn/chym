@@ -31,7 +31,12 @@ add_action( 'chym_footer', function() {
             ]
         ]
     ] );
-    $out .= chym_footer_credit();
+    $out .= Chym_footer_mxh( [
+        'face' => '#',
+        'googleplus' => '#',
+        'zalo' => '#',
+        'youtube' => '#',
+    ] );
     $out .= '</footer>';
     __render( $out );
 });

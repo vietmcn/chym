@@ -92,8 +92,9 @@ if ( !class_exists( 'Chym_Bootstrap' ) ) {
             wp_enqueue_style( 'chym-style', get_template_directory_uri().'/style.css', '', $chym_ver );
             //OwlCarousel
             wp_enqueue_style( 'chym-carousel', get_template_directory_uri().'/assets/css/owl.carousel.min.css', '', '2.3.4' );
-            wp_enqueue_style( 'chym-carousel-themes', get_template_directory_uri().'/assets/css/owl.theme.default.min.css', '', '2.3.4' );
-            
+            wp_enqueue_style( 'chym-carouselthemes', get_template_directory_uri().'/assets/css/owl.theme.default.min.css', '', '2.3.4' );
+            //Font Icon
+            wp_enqueue_style( 'chym-fonticon', '//unpkg.com/ionicons@4.2.4/dist/css/ionicons.min.css', '', '4.2.4' );
             //Font Google
             wp_enqueue_style( 'chym-font', '//fonts.googleapis.com/css?family=Quicksand:400,500,700', '', $chym_ver );
 
@@ -110,7 +111,6 @@ if ( !class_exists( 'Chym_Bootstrap' ) ) {
         public function chym_script_javascript()
         {   
             global $chym_ver, $mobile;
-            wp_enqueue_script( 'chym-font-icon', '//unpkg.com/ionicons@4.2.0/dist/ionicons.js', array( 'jquery' ), '4.2.0', true );
             wp_enqueue_script( 'chym-owlcarousel', get_template_directory_uri().'/assets/js/owl.carousel.min.js', array( 'jquery' ), '2.3.4', true );
             if ( $mobile->isMobile() ) {
                 wp_enqueue_script( 'chym-small', get_template_directory_uri().'/assets/js/chym-small.js', array( 'jquery' ), $chym_ver, true );
