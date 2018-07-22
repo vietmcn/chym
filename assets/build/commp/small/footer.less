@@ -42,15 +42,59 @@ footer {
             }
         }
     }
+    h4 {
+        .fontw(500);
+        .font(13);
+        margin-bottom: 15px;
+    }
+    // About
+    .chym-footer-info {
+        background: @color-trang;
+        h4 {
+            border-bottom: 1px solid #f0f1f5;
+            margin: 0;
+            padding: 15px 10px;
+            .display(flex);
+            align-items: center;
+            span {
+                width: 90%;
+            }
+            ion-icon {
+                font-size: 25px;
+                width: 10%;
+            }
+        }
+        ul {
+            margin: 0px;
+            padding: 0px;
+            li {
+                padding: 0px;
+                list-style: none;
+                a {
+                    .font(13);
+                    color: @color-den;
+                    padding: 5px 10px;
+                    display: block;
+                }
+            }
+            li:last-child {
+                a {
+                    border-bottom: 1px solid #f0f1f5;
+                    padding-bottom: 10px;
+                }
+            }
+        }
+        .chym-footer-info-content {
+            display: none;
+        }
+        .show {
+            display: block;
+        }
+    }
     //Social Net
     .network {
         padding: 10px 10px;
         background: @color-trang;
-        h4 {
-            .fontw(500);
-            .font(13);
-            margin-bottom: 15px;
-        }
         .icon-mxh {
             .display(flex);
             justify-content: center;
@@ -87,19 +131,19 @@ footer {
                 }
                 span.youtube {
                     background: #d22215;
-                    .ion-logo-youtube {
+                    [name="logo-youtube"] {
                         color: @color-trang;
                     }
                 }
                 span.googleplus {
                     background: #dc4e41;
-                    .ion-logo-googleplus {
+                    [name="logo-googleplus"] {
                         color: @color-trang;
                     }
                 }
                 span.facebook {
                     //background: #3b5898;
-                    .ion-logo-facebook {
+                    [name="logo-facebook"] {
                         color: #3b5898;
                         font-size: 40px;
                     }

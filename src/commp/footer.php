@@ -31,6 +31,9 @@ add_action( 'chym_footer', function() {
             ]
         ]
     ] );
+    if ( $mobile->isMobile() ) {
+        $out .= Chym_footer_info_m();
+    }
     $out .= Chym_footer_mxh( [
         'face' => '#',
         'googleplus' => '#',

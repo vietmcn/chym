@@ -19,8 +19,8 @@ if ( !function_exists( 'Chym_navbar_dropdown_m' ) ) {
             $out  = '<div class="Chym-navbar-m">';
             $out .= '<ul class="chym-menu">';
             $out .= '<h4>Thông tin tài khoản</h4>';
-            $out .= '<li><i class="icon ion-ios-log"></i> <a href="#">Đăng Nhập</a></li>';
-            $out .= '<li><i class="icon ion-ios-person"></i> <a href="#">Đăng Ký</a></li>';
+            $out .= '<li><i class="icon ion-md-heart"></i><a href="#">Đăng Nhập</a></li>';
+            $out .= '<li><i class="icon ion-ios-person"></i><a href="#">Đăng Ký</a></li>';
             $out .= '<li class="hotline"><i class="icon ion-ios-phone"></i> <a href="tel:19001267">HotLine Mua Hàng <strong>0886 40 95 98</strong></a></li>';
             $out .= '</ul>';
             $out .= '</div>';

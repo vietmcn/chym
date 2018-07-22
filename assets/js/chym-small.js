@@ -11,5 +11,9 @@ jQuery(document).ready(function ($) {
         autoWidth: true,
         items: 4,
         dots: false,
-    })
+    });
+    //ToggleClass
+    $(".chym-click").click(function() {
+        $('.chym-footer-info-content').toggleClass("show");
+    });
 });
