@@ -14,6 +14,21 @@ jQuery(document).ready(function ($) {
     });
     //ToggleClass
     $(".chym-click").click(function() {
-        $('.chym-footer-info-content').toggleClass("show");
+
+        $('.dropdown-content').toggleClass("show");
+        
+        if ( $('.dropdown').hasClass('dropblock') ) {
+
+            $('.dropup').addClass('dropblock');
+            $('.dropdown').removeClass('dropblock');
+
+        } else {
+
+            $('.dropup').removeClass('dropblock');
+            $('.dropup').removeClass('dropdefault');
+            $('.dropdown').addClass('dropblock');
+
+        }
+        
     });
 });
