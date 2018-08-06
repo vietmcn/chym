@@ -17,16 +17,16 @@ jQuery(document).ready(function ($) {
 
         $('.dropdown-content').toggleClass("show");
         
-        if ( $('.dropdown').hasClass('dropblock') ) {
+        if ( $('.dropup').hasClass('dropblock') ) {
 
-            $('.dropup').addClass('dropblock');
-            $('.dropdown').removeClass('dropblock');
+            $('.dropdown').addClass('dropblock');
+            $('.dropup').removeClass('dropblock');
 
         } else {
 
-            $('.dropup').removeClass('dropblock');
-            $('.dropup').removeClass('dropdefault');
-            $('.dropdown').addClass('dropblock');
+            $('.dropdown').removeClass('dropdefault');
+            $('.dropdown').removeClass('dropblock');
+            $('.dropup').addClass('dropblock');
 
         }
         

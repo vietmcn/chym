@@ -6,7 +6,7 @@ if ( !function_exists( 'Chym_navbar_m' ) ) {
     function Chym_navbar_m() 
     {
         $out  = '<nav Chym_buttonMobile id="chym-button-mobile" class="chym-nav-m">';
-        $out .= '<button id="chym-nav-m" class="chym-btn chym-navbar-m"><div id="nav-icon4" class=""><span></span><span></span><span></span></div></button>';
+        $out .= '<button id="chym-nav-m" class="chym-btn chym-navbar-m"><div id="nav-icon4"><span></span><span></span><span></span></div></button>';
         $out .= '</nav>';
         return $out;
     }

@@ -44,9 +44,9 @@ if ( !function_exists( 'Chym_footer_mxh' ) ) {
 if ( !function_exists( 'Chym_footer_info_m' ) ) {
     function Chym_footer_info_m()
     {
-        $out  = '<div class="chym-footer-info">';
-        $out .= '<h4 class="chym-click"><span>Các Thông Tin Khác</span> <ion-icon class="dropdown dropnone" name="arrow-dropdown"></ion-icon><ion-icon class="dropup dropnone dropdefault" name="arrow-dropup"></ion-icon></h4>';
-        $out .= '<ul class="chym-footer-info-content">';
+        $out  = '<div class="chym-footer-info ">';
+        $out .= '<h4 class="chym-click"><span>Các Thông Tin Khác</span> <ion-icon class="dropdown dropnone dropdefault" name="arrow-dropdown"></ion-icon><ion-icon class="dropup dropnone" name="arrow-dropup"></ion-icon></h4>';
+        $out .= '<ul class="chym-footer-info-content dropdown-content">';
         $out .= '<li><a href="#">Về Chúng Tôi</a></li>';
         $out .= '<li><a href="#">Chính sách</a></li>';
         $out .= '<li><a href="#">Hổ trợ khách hàng</a></li>';
