@@ -2,8 +2,8 @@
 if ( !defined( 'ABSPATH' ) ) {
     exit;
 }
-if ( !class_exists( 'Chym_Product_thumbnail' ) ) {
-    class Chym_Product_thumbnail
+if ( !class_exists( 'Chym_WC_Product_thumbnail' ) ) {
+    class Chym_WC_Product_thumbnail
     {
         protected $att = array();
         

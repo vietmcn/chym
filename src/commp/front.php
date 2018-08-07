@@ -11,7 +11,6 @@ add_action( 'chym_index', function() {
      * @author chym
      */
     __render( '<section id="contentID" chym-product class="chym-products list-product chym-content container">' );
-
     if ( chym_is_woocommerce_activated() ) {
         /**
          * @import /wc/product-cat.php
@@ -61,6 +60,9 @@ add_action( 'chym_index', function() {
                 ]
             ],
         ] ) );
+        //BreadCrumb
+        import_commp( 'breadcrumb', 'global' );
+        __render( chym_breadcrumb() );
         //Render Product List Item
         __render(
             chym_product_content( [
