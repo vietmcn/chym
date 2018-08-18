@@ -4,12 +4,15 @@ if ( !defined('ABSPATH') ) {
 }
 require N_EXTEND_FOLDER .'/src/wc/global/price.php';
 require N_EXTEND_FOLDER .'/src/wc/global/product-thumbnail.php';
+require N_EXTEND_FOLDER .'/src/wc/global/pa.php';
 
 if ( !function_exists( 'chym_product_content' ) ) {
     function chym_product_content( $att = array() )
     {
         $thumbnail = new Chym_WC_Product_thumbnail;
         $price = new Chym_WC_Price;
+        $pa = new Chym_WC_Pa;
+
         $Query = new WP_Query( [
             'post_type' => 'product',
             'posts_per_page' => $att['posts_per_page'],
@@ -36,12 +39,19 @@ if ( !function_exists( 'chym_product_content' ) ) {
                 $out .= '</a>';
                 $out .= '</figure>';
                 //Set Info
-                $out .= '<footer id="chym-productinfo">';
+                $out .= '<div id="chym-productinfo">';
                 $out .= '<a href="'.esc_url( get_permalink( $Query->post->ID ) ).'" title="'.esc_attr( get_the_title( $Query->post->ID ) ).'">';
                 $out .= '<h3>'.get_the_title( $Query->post->ID ).'</h3>';
                 $out .= $price->get_price( ['post_id' => $Query->post->ID] );
+                $out .= $pa->get_sku([
+                    'post_id' => $Query->post->ID,
+                ]);
+                $out .= $pa->pa_e( [
+                    'post_id' => $Query->post->ID,
+                    'pa' => 'pa_nha-cung-cap',
+                ] );
                 $out .= '</a>';
-                $out .= '</footer>';
+                $out .= '</div>';
                 $out .= '</div>';
 
             endwhile;

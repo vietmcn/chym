@@ -18,7 +18,7 @@ add_action( 'chym_index', function() {
          * @since 1.0
          */
         import_commp( 'owlcarousel', 'global' );
-        import_commp( 'product', 'wc' );
+        import_commp( 'front-product', 'wc' );
         //Render Owl
         __render( Chym_owl_m([
             'item' => [

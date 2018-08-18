@@ -1,0 +1,27 @@
+// main: ../../small.less
+.chym-breadcrumb {
+    padding: 0 10px;
+    margin: 0;
+    height: 40px;
+    align-items: center;
+    background: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(235, 235, 235);
+    margin-bottom: 5px;
+    li {
+        list-style: none;
+        .display(flex);
+        ion-icon {
+            font-size: 20px;
+            padding-bottom: 2px;
+        }
+        a {
+            color: @color-den;
+            text-decoration: none;
+            h4 {
+                .font(14);
+                .fontw(500);
+                margin: 0px;
+            }
+        }
+    }
+}

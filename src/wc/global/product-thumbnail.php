@@ -18,6 +18,13 @@ if ( !class_exists( 'Chym_WC_Product_thumbnail' ) ) {
             }
             return $thumbnail;
         }
+        public function thumbnail_e( $att )
+        {
+            $out  = '<figure id="chym-archive-thumbnail">';
+            $out .= '<img src="'.$this->get_thumbnail( ['post_id'=> $att['post_id'] ] ).'" alt="'.esc_attr( $att['alt'] ).'"/>';
+            $out .= '</figure>';
+            return $out;
+        }
     }
     
 }

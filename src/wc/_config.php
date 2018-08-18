@@ -8,8 +8,9 @@ if (! defined( 'ABSPATH' ) ) {
  * @since 3.4+
  * @author Woocommerce
  */
-require_once ( 'hook/product-taxonomy.php' );
-require_once ( 'hook/product-single.php' );
+require_once ( 'hook/archive-product.php' );
+require_once ( 'hook/content-product.php' );
+require_once ( 'hook/content-single-product.php' );
 
 class Chym_WCconfig
 {

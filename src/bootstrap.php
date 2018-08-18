@@ -100,8 +100,12 @@ if ( !class_exists( 'Chym_Bootstrap' ) ) {
 
             if ( $mobile->isMobile() ) {
 
-                wp_enqueue_style( 'chym-small', get_template_directory_uri().'/assets/css/chym-small.min.css', '', $chym_ver );
-
+                wp_enqueue_style( 'chym-archive', get_template_directory_uri().'/assets/css/chym-small.min.css', '', $chym_ver );
+                
+                if ( is_shop() || is_archive() ) {
+                    //Check Position Archive Shop
+                    wp_enqueue_style( 'chym-small', get_template_directory_uri().'/assets/css/chym-archive-product.min.css', '', $chym_ver );
+                }
             } else {
                 
                 wp_enqueue_style( 'chym-large', get_template_directory_uri().'/assets/css/chym-large.min.css', '', $chym_ver );
